@@ -1,0 +1,9 @@
+
+.main {
+    grid-area: m;
+    background-color: #AFDBF5;
+}
+
+.main img {
+    width: 100%;
+}

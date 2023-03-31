@@ -1,13 +1,15 @@
 import React from 'react';
-import {Technologies} from "./Technologies";
-import {Header} from "./Header";
-import './App.css';
+import s from './App.module.css';
+import {Header} from "./components/Header/Header";
+import {Navbar} from "./components/Navbar/Navbar";
+import {Profile} from "./components/Profile/Profile";
 
-const App = () => {
+const App = ():JSX.Element => {
     return (
-        <div>
+        <div className={s.container}>
             <Header />
-            <Technologies />
+            <Navbar />
+            <Profile />
         </div>
     );
 }
