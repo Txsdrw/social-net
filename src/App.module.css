@@ -13,3 +13,12 @@
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
 }
+
+.content {
+  grid-area: m;
+  background-color: #AFDBF5;
+}
+
+.content img {
+  width: 100%;
+}

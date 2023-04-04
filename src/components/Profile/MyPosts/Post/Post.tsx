@@ -11,7 +11,6 @@ export const Post: FC<PostType> = (props) => {
         <div className={s.post}>
             <img src={avatar} />
             <div>{props.message}</div>
-            <div>{props.message}</div>
 
         </div>
     )
