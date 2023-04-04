@@ -1,0 +1,20 @@
+
+.message {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.message .userName {
+    text-align: center;
+}
+
+.message .messageText {
+    max-width: 300px;
+    border: solid 1px #5BAED9;
+}
+
+.message img {
+    width: 50px;
+}
+

@@ -1,15 +1,13 @@
-import React, {FC} from "react";
-import mountain from "../../assets/wide-mount.jpg";
-import {MyPosts} from "./MyPosts/MyPosts";
+import React, {FC} from 'react';
+import {MyPosts} from './MyPosts/MyPosts';
+import {ProfileInfo} from './MyPosts/ProfileInfo/PropfileInfo';
+import s from './Profile.module.css'
 
 export const Profile: FC = () => {
     return (
-        <main >
-            <div>
-                <img src={mountain}/>
-            </div>
-            <div>ava + discrip</div>
-            <MyPosts />
+        <main className={s.main}>
+            <ProfileInfo/>
+            <MyPosts/>
         </main>
     )
 }
