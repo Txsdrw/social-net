@@ -1,8 +1,14 @@
 import React, {FC} from 'react';
 import s from './MyPosts.module.css'
 import {Post} from './Post/Post';
+import {PostsType} from '../../../App';
 
-export const MyPosts: FC = () => {
+type MyPostsType = {
+    posts: PostsType[]
+}
+
+export const MyPosts: FC<MyPostsType> = (props) => {
+
     return (
         <div>
             <div>
@@ -10,8 +16,7 @@ export const MyPosts: FC = () => {
                 <button>Add post</button>
             </div>
             <div className={s.posts}>
-                <Post message={'Hello, how are you?'}/>
-                <Post message={'My name is Anton'}/>
+                {props.posts.map(el=> <Post key={el.id} message={el.message} id={el.id} likesCount={el.likesCount} />)}
             </div>
         </div>
     )

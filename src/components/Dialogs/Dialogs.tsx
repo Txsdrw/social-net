@@ -2,26 +2,25 @@ import {FC} from 'react';
 import s from './Dialogs.module.css'
 import {DialogItem} from './DialogItem/DialogItem';
 import {Message} from './DialogMessage/Message';
+import {MessagesType, UsersData} from '../../App';
 
+type DialogsType = {
+    messages: MessagesType[]
+    users: UsersData[]
+}
 
-export const Dialogs: FC = () => {
+export const Dialogs: FC<DialogsType> = (props) => {
+
     return (
         <div className={s.dialog}>
             <div className={s.userList}>
                 DIALOGS
                 <ul>
-                    <DialogItem id={'1'} name={'Bob'}/>
-                    <DialogItem id={'2'} name={'Julia'}/>
-                    <DialogItem id={'3'} name={'Anton'}/>
-                    <DialogItem id={'4'} name={'John'}/>
-                    <DialogItem id={'5'} name={'Elena'}/>
+                    {props.users.map(el => <DialogItem key={el.id} name={el.name} id={el.id} />)}
                 </ul>
             </div>
             <div className={s.messages}>
-                <Message/>
-                <Message/>
-                <Message/>
-                <Message/>
+                {props.messages.map(el => <Message key={el.id} message={el.message} id={el.id} />)}
             </div>
         </div>
     )
